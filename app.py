@@ -83,7 +83,7 @@ def edit_fruit(id):
             db.fruits.update_one({'_id': ObjectId(id)}, {'$set': {'image' : filename}})
         
         db.fruits.update_one({'_id': ObjectId(id)}, {'$set': {
-            'name':name, 'price':price, 'description':description, 'image':filename
+            'name':name, 'price':price, 'description':description
         }})
 
         flash ('Berhasil mengubah data buah!')
